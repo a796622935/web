@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>邓济杰 design</title>
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+     
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    
+    <style>
+     @import url('https://i.icomoon.io/public/c88de6d4a5/JeffPannoneWeb/style.css');
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+html, body, .page-wrap {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+ font-family: 'Oswald', sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1;
+  overflow: hidden;
+  
+    
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+}
+i {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  z-index: 1;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  
+  background-position: center center;
+  background-size: 100%;
+  opacity: 1;
+  filter: blur(5px);
+  background-color: #fff;
+ 
+  background-size: cover;
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.page-wrap {
+  position: relative;
+  z-index: 100;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),url(iop.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+}
+.wrap-center {
+  width: 480px;
+  overflow: hidden;
+  transition: width 0.5s, background 0.5s;
+}
+.wrap-center.expand-width {
+  width: 630px;
+}
+.light-theme .wrap-center {
+  background: rgba(255, 255, 255, .0);
+  color: rgba(0, 0, 0, .7);
+}
+.light-theme .wrap-center.bio-active {
+  background: rgba(255, 255, 255, .3);
+}
+.dark-theme .wrap-center {
+  background: rgba(0, 0, 0, .0);
+  color: rgba(255, 255, 255, .9);
+}
+.dark-theme .wrap-center.bio-active {
+  background: rgba(0, 0, 0, .3);
+}
+.header {
+  width: 100%;
+  position: relative;
+  padding: 30px 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, .0);
+  transition: border-bottom-color 0.5s;
+}
+.expand-width .header {
+  border-bottom-color: rgba(0, 0, 0, .075);
+}
+.header .hello-h1 {
+  display: block;
+  cursor: pointer;
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  font-weight: 700;
+  transition: font-size 0.5s;
+     color: white;
+    letter-spacing: 2px;
+}
+.expand-width .header .hello-h1 {
+  font-size: 1.5em;
+   
+}
+.header .name {
+  display: block;
+  margin: 15px 0;
+  font-size: 1.2em;
+    color: white;
+}
+.header .avatar {
+  width: 180px;
+  margin: 0 auto;
+  backface-visibility: hidden;
+  opacity: 1;
+  transition: opacity 0.5s, width 0.5s;
+    border: 3px solid white;
+    border-radius: 150px;
+    padding: 7px;
+}
+.expand-width .header .avatar {
+  opacity: 0.5;
+  width: 90px;
+}
+.expand-width .header .avatar:hover {
+  opacity: 1;
+}
+.header img {
+  display: block;
+  width: 100%;
+  border-radius: 100%;
+}
+.main-nav {
+  position: relative;
+  padding-bottom: 40px;
+}
+.main-nav ul li {
+  display: inline-block;
+}
+.main-nav .nav-btn {
+  cursor: pointer;
+  display: block;
+  font-size: 0.75em;
+  text-transform: none;
+  padding: 0.95em;
+  margin: 2px 0;
+  width: 120px;
+  border-radius: 100px;
+  backface-visibility: hidden;
+  transition: background 0.3s;
+    background: white;
+  
+  
+}
+.main-nav .nav-btn:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+.main-nav .nav-btn i {
+  font-size: 70%;
+  top: -0.075em;
+}
+.toggle-about {
+  cursor: pointer;
+  border-radius: 100%;
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  left: 50%;
+  margin-left:-21px;
+  margin-top: 30px;
+  padding: 10px 0 0 1px;
+  text-align: center;
+  font-size: 0.7em;
+  display: block;
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+  backface-visibility: hidden;
+  transition: background 0.3s;
+  border: 3px solid white;
+  color: white;
+}
+.toggle-about:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+.expand-height .toggle-about {
+  transform: rotate(180deg);
+}
+.about {
+  font-weight: 400;
+  width: 100%;
+  padding: 40px 60px 0px;
+  text-align: left;
+  overflow: hidden;
+  height: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  transition: height 0.5s, padding-top 0.2s;
+}
+.about .copy-block {
+  padding-top: 40px;
+}
+.expand-height .about {
+  height: 450px;
+}
+.about .close-about {
+  margin: 0 auto;
+  font-size: 2.2em;
+}
+.about h2 {
+  font-size: 1.5em;
+  margin: 0;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+   
+}
+.about p {
+  margin-bottom: 1.25em;
+  font-size: 0.9em;
+  line-height: 1.7;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+    
+    
+    </style>
+</head>
+<body>
+   <div class="overlay"></div>
+<div class="page-wrap light-theme">
+  
+  <div class="wrap-center">
+    <header class="header">
+      <div class="avatar">
+        <div class=""></div>
+        <img src="证件照.jpg" alt="Jeff Pannone">
+      </div>
+      
+      <span class="name">邓济杰 </span>
+      <h1 class="hello-h1">PERSONAL RESUME</h1>
+      <nav class="main-nav">
+  <span class="toggle-about"><i class="i-chevron-down"></i></span>
+ 
+      </nav>
+    </header>
+    <div class="about" id="about">
+      <div class="copy-block">
+        <h2>About</h2>
+        <p>2015年就读于湖北工程学院<br/>
+          2018年荣获中山市婴童用品大赛产品组铜奖<br/>
+          2018年荣获中国“互联网+”大学生创新创业大赛湖北省主赛道创意组铜奖<br/>
+          2018年荣获“中国·扬州”新玩具创新创业设计大赛创业组入围奖<br/>
+          2018年荣获湖北学院空间大赛入围奖<br/>
+          2018年荣获2018首届李白文化创意产品设计大赛优秀奖<br/>
+          2019年任职深圳唯物设计公司设计师<br/>
+          2020年任职合肥垒坤汽车服务公司业务推广<br/>
+        </p>
+        <h2>Personal introduction</h2>
+        <p>有一定的审美能力，对喜爱设计行业。具备良好的团队协作精神。能承担责任，思维活跃，乐于接受新鲜事物，上进爱学习，希望在公司内体现个人价值。
+          曾多次在比赛中上台陈述设计方案进行答辩，有不错的语言表达能力。对于设计方案善于倾听别人的意见。</p>
+      </div>
+      
+ 
+      
+    </div>
+  </div>
+</div>
+ <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script>
+    // default state of bio
+var bioActive = false;
+// toggle bio with animations/timing relative to its state
+// if closed, expand width first, then height
+// if open, expand height first, then width
+function toggleBio(){
+  if(bioActive == false){
+    firstClass = 'expand-width';
+    secondClass = 'expand-height';  
+    bioActive = true;
+  }else{
+    firstClass = 'expand-height';
+    secondClass = 'expand-width';    
+    bioActive = false;
+  } 
+  
+  $(".wrap-center").toggleClass("bio-active").toggleClass(firstClass).delay(500).queue(function(){
+    $(this).toggleClass(secondClass).dequeue();
+  }); 
+}
+// run bio toggle on click
+$(".btn-about, .close-about, .toggle-about").on("click", toggleBio);
+    
+</script>
+</body>
+</html>
